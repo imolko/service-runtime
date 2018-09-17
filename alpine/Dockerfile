@@ -1,19 +1,14 @@
 # Construimos Dlv y algun otra dependencia.
 FROM golang:1.11-alpine as dependencies
 
-# Buscamos git y curl.
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
-        git \
-        curl \
-    && rm -rf /var/lib/apt/lists/*
+# instalamos dependencia en alpine
+RUN apk add --update git curl
     
 # Instalamos dlv para debug.
 RUN go get -v -u -d github.com/derekparker/delve/cmd/dlv && \
     cd $GOPATH/src/github.com/derekparker/delve && \
     go install github.com/derekparker/delve/cmd/dlv && \
     dlv version
-
 
 #####
 # Costruimos alpine
