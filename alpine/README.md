@@ -1,6 +1,6 @@
-# Base para microservicios en golang
+# Service Runtime Alpine
 
-Como base para la ejecucion de microservicios.
+Sistema Operativo base para la ejecucion de servicios en golang.
 
-Usando alpine para ejecucion de nuestros servicios.
+Incluye dlv, para el debug.
 
