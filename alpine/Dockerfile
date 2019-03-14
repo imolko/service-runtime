@@ -1,5 +1,5 @@
 # Construimos Dlv y algun otra dependencia.
-FROM golang:1.11-alpine as dependencies
+FROM golang:1.12-alpine as dependencies
 
 # instalamos dependencia en alpine
 RUN apk add --update git curl
