@@ -1,6 +1,6 @@
 
 # Construimos Dlv y algun otra dependencia.
-FROM golang:1.11-stretch as dependencies
+FROM golang:1.12-stretch as dependencies
 
 # Buscamos git y curl.
 RUN apt-get update \
